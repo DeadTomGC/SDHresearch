@@ -1,0 +1,7 @@
+.micromamba/
+dist/
+build/
+*.csv
+*.spec
+*.txt
+*.html
