@@ -3,10 +3,10 @@ from geopy.geocoders import Nominatim
 import folium
 from folium.plugins import HeatMap
 import time
+import openpyxl
 
 # Load the addresses from a csv file
-df = pd.read_csv('data.csv')
-
+df = pd.read_excel('data.xlsx', engine="openpyxl")
 geolocator = Nominatim(user_agent="Heritage_Valley_Research")
 
 # Create an empty list to hold the geocoded coordinates
