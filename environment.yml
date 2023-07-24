@@ -1,4 +1,4 @@
-name: /home/deadtomgc/Documents/pythonProjects/SDHresearch/.micromamba/envs/default
+name: ./.micromamba/envs/default
 channels:
   - conda-forge
   - defaults
@@ -57,4 +57,4 @@ dependencies:
   - urllib3=2.0.4=pyhd8ed1ab_0
   - wheel=0.40.0=pyhd8ed1ab_1
   - xz=5.2.6=h166bdaf_0
-prefix: /home/deadtomgc/Documents/pythonProjects/SDHresearch/.micromamba/envs/default
+prefix: ./.micromamba/envs/default
