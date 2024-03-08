@@ -5,3 +5,4 @@ build/
 *.spec
 *.txt
 *.html
+API_token.txt
