@@ -4,5 +4,5 @@ build/
 *.csv
 *.spec
 *.txt
-*.html
+*.xlsx
 API_token.txt
