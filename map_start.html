@@ -1,29 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Marker</title>
-    <!-- The callback parameter is required, so we use console.debug as a noop -->
-    <script async src="https://maps.googleapis.com/maps/api/js?key=insert_key&callback=console.debug&libraries=maps,marker&v=beta">
+    <title>Simple Heatmap</title>
+    <!-- Include the visualization library since we're using a Heatmap -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=insert_key&callback=console.debug&callback=initMap&libraries=maps,marker,visualization&v=beta">
     </script>
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      gmp-map {
+      /* Set the size of the map container */
+      #map {
         height: 100%;
       }
-
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
+      html, body {
         height: 100%;
         margin: 0;
         padding: 0; 
       }
     </style>
+    <script>
+      function initMap() {
+        /* Data points defined as an array of LatLng objects */
+        var heatmapData = [
+          new google.maps.LatLng(37.782, -122.45),
+          new google.maps.LatLng(37.782, -122.445),
+          new google.maps.LatLng(37.782, -122.443),
+          new google.maps.LatLng(37.782, -122.441),
+          new google.maps.LatLng(37.782, -122.439),
+          new google.maps.LatLng(37.782, -122.437),
+          new google.maps.LatLng(37.782, -122.435),
+          new google.maps.LatLng(37.785, -122.447),
+          new google.maps.LatLng(37.785, -122.445),
+          new google.maps.LatLng(37.785, -122.443),
+          new google.maps.LatLng(37.785, -122.441),
+          new google.maps.LatLng(37.785, -122.439),
+          new google.maps.LatLng(37.785, -122.437),
+          new google.maps.LatLng(37.785, -122.435)
+        ];
+
+        var sanFrancisco = new google.maps.LatLng(37.774546, -122.433523);
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: sanFrancisco,
+          zoom: 13,
+          mapTypeId: 'satellite'
+        });
+
+        var heatmap = new google.maps.visualization.HeatmapLayer({
+          data: heatmapData
+        });
+
+        heatmap.setMap(map);
+      }
+    </script>
   </head>
   <body>
-    <gmp-map center="origin_coordinates" zoom="14" map-id="FOOD_INSECURITY">
-marker_list
-    </gmp-map>
+    <div id="map"></div>
   </body>
 </html>
+  
