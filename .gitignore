@@ -6,3 +6,4 @@ build/
 *.txt
 *.xlsx
 API_token.txt
+map_id.txt
