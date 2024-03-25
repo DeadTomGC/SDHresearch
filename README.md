@@ -28,6 +28,11 @@ Built for Python 3.
   - Groceries are in blue.
   - Bus stops located near patient addresses are loaded dynamically and are in red.
     - Not all bus stops are loaded if there is another stop within 500m.
+
+Example Output:
+![Screenshot from 2024-03-24 21-30-41](https://github.com/DeadTomGC/SDHresearch/assets/1928571/8c82e4df-31b1-4f9e-9226-78acc63668f4)
+
+
    
 This may cost a dollar or so to run in API fees depending on the number of addresses.
 Note that the html will contain your map ID and API key, so distribute carefully.
