@@ -16,7 +16,7 @@ Built for Python 3.
   - One must be labeled `Address` and contain patient addresses
   - The other must be labeled `Groceries` and contain legitimate grocery store locations
   - Both should contain a list of addresses.
-- Create a file called `API_Token.txt` and put your Google maps API token on the first line.
+- Create a file called `API_token.txt` and put your Google maps API token on the first line.
 - Create a file called `map_id.txt` and put a Google map ID on the first line.
 
 ### Running
